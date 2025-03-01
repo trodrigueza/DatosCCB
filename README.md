@@ -1,6 +1,6 @@
 # Análisis de Datos de Seguridad y Criminalidad
 
-Este proyecto realiza un análisis exhaustivo de diversos conjuntos de datos relacionados con la seguridad y criminalidad. 
+Se realiza un análisis de diversos conjuntos de datos relacionados con la seguridad y criminalidad para el concurso de Datos por la seguridad.
 
 ## Contenido
 
@@ -14,8 +14,8 @@ Este proyecto realiza un análisis exhaustivo de diversos conjuntos de datos rel
 
 Los resultados del análisis se encuentran en:
 
-- **visualizaciones/**: Contiene todas las visualizaciones generadas.
-- **informe/reporte_analisis.html**: Informe completo con todas las visualizaciones.
+- **visualizaciones/**: Contiene visualizaciones generadas.
+- **informe/reporte_analisis.html**: Informe visualizaciones.
 
 ## Requisitos
 
@@ -30,7 +30,7 @@ plotly
 folium
 ```
 
-Puede instalar todas las dependencias con:
+Instalar todas las dependencias con:
 
 ```
 pip install -r requirements.txt
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ## Ejecución
 
-Para ejecutar el análisis completo:
+Para ejecutar:
 
 ```
 python analisis_principal.py
