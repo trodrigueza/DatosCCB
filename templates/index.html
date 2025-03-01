@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    #menu {
+      margin-bottom: 10px;
+    }
+
+    #controls {
+      margin: 10px 0;
+    }
+
+    iframe {
+      width: 90%;
+      height: 80vh;
+      border: 1px solid #ccc;
+      display: block;
+      margin: auto;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Visualizaciones</h2>
+
+  <div id="menu">
+    <label for="graficoSelect">Selecciona un gráfico:</label>
+    <select id="graficoSelect"></select>
+  </div>
+
+  <div id="controls">
+    <button id="prevBtn">⬅️ Anterior</button>
+    <button id="nextBtn">Siguiente ➡️</button>
+  </div>
+
+  <iframe id="visor" src="" frameborder="0"></iframe>
+
+  <script>
+    let archivos = [];
+    let currentIndex = 0;
+
+    // Obtener lista de archivos desde el servidor
+    fetch("/api/archivos")
+      .then(response => response.json())
+      .then(data => {
+        archivos = data;
+        const select = document.getElementById("graficoSelect");
+        const visor = document.getElementById("visor");
+
+        if (archivos.length === 0) {
+          select.innerHTML = "<option>No hay gráficos disponibles</option>";
+          return;
+        }
+
+        archivos.forEach((archivo, index) => {
+          let option = document.createElement("option");
+          option.value = "/visualizaciones/" + archivo;
+          option.textContent = archivo;
+          select.appendChild(option);
+        });
+
+        // Cargar el primer gráfico por defecto
+        select.value = "/visualizaciones/" + archivos[0];
+        visor.src = select.value;
+        currentIndex = 0;
+
+        // Cambiar el gráfico al seleccionar del menú
+        select.addEventListener("change", () => {
+          visor.src = select.value;
+          currentIndex = archivos.indexOf(select.value.replace("/visualizaciones/", ""));
+        });
+      })
+      .catch(error => console.error("Error cargando archivos:", error));
+
+    // Funciones de navegación
+    function cambiarGrafico(direccion) {
+      if (archivos.length === 0) return;
+
+      currentIndex += direccion;
+      if (currentIndex < 0) currentIndex = archivos.length - 1; // Si va hacia atrás en el primero, salta al último
+      if (currentIndex >= archivos.length) currentIndex = 0; // Si avanza en el último, salta al primero
+
+      const nuevoArchivo = "/visualizaciones/" + archivos[currentIndex];
+      document.getElementById("visor").src = nuevoArchivo;
+      document.getElementById("graficoSelect").value = nuevoArchivo;
+    }
+
+    // Eventos de los botones
+    document.getElementById("prevBtn").addEventListener("click", () => cambiarGrafico(-1));
+    document.getElementById("nextBtn").addEventListener("click", () => cambiarGrafico(1));
+  </script>
+
+</body>
+
+</html>
