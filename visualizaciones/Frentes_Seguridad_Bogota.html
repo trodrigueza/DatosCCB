@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_241251e2b0616e4c9619c144871fa16e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+                <h3 align="center" style="font-size:16px"><b>Distribución de Frentes de Seguridad de Bogotá por Localidad</b></h3>
+            
+    
+            <div class="folium-map" id="map_241251e2b0616e4c9619c144871fa16e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_241251e2b0616e4c9619c144871fa16e = L.map(
+                "map_241251e2b0616e4c9619c144871fa16e",
+                {
+                    center: [4.6097, -74.0817],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_742008492ae5aec9403850c56432ac19 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_742008492ae5aec9403850c56432ac19.addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var circle_b28015042e3d18285205b5c96c9152ad = L.circle(
+                [4.644502551428989, -74.08586601724558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 520.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_8c9a957f1696096ab29742076961f6c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8027edb81399fdba55a8669d7c464633 = $(`<div id="html_8027edb81399fdba55a8669d7c464633" style="width: 100.0%; height: 100.0%;"><b>ARANDA</b><br>Frentes de seguridad: 26</div>`)[0];
+                popup_8c9a957f1696096ab29742076961f6c1.setContent(html_8027edb81399fdba55a8669d7c464633);
+            
+        
+
+        circle_b28015042e3d18285205b5c96c9152ad.bindPopup(popup_8c9a957f1696096ab29742076961f6c1)
+        ;
+
+        
+    
+    
+            var marker_27e6f767f19b4e49a3f2c2ad7afc76d7 = L.marker(
+                [4.644502551428989, -74.08586601724558],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_6b41dc62c1c28577559567c9da3f95fe = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eARANDA\u003cbr\u003e26 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_27e6f767f19b4e49a3f2c2ad7afc76d7.setIcon(div_icon_6b41dc62c1c28577559567c9da3f95fe);
+        
+    
+                marker_27e6f767f19b4e49a3f2c2ad7afc76d7.setIcon(div_icon_6b41dc62c1c28577559567c9da3f95fe);
+            
+    
+            var circle_30cb6db3c81f8a1325168df9e0bba69e = L.circle(
+                [4.641825211948852, -74.10976918989199],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_a5ca7ef9108570d911537e0ef1ee58da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88991c5f223524dd2dd822893ffa092a = $(`<div id="html_88991c5f223524dd2dd822893ffa092a" style="width: 100.0%; height: 100.0%;"><b>BOLIVAR</b><br>Frentes de seguridad: 119</div>`)[0];
+                popup_a5ca7ef9108570d911537e0ef1ee58da.setContent(html_88991c5f223524dd2dd822893ffa092a);
+            
+        
+
+        circle_30cb6db3c81f8a1325168df9e0bba69e.bindPopup(popup_a5ca7ef9108570d911537e0ef1ee58da)
+        ;
+
+        
+    
+    
+            var marker_e5e3d645984896688c9c7d42d5be55a6 = L.marker(
+                [4.641825211948852, -74.10976918989199],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_2f8cae8a54dff5b9de6ef7bfb98e70a8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eBOLIVAR\u003cbr\u003e119 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_e5e3d645984896688c9c7d42d5be55a6.setIcon(div_icon_2f8cae8a54dff5b9de6ef7bfb98e70a8);
+        
+    
+                marker_e5e3d645984896688c9c7d42d5be55a6.setIcon(div_icon_2f8cae8a54dff5b9de6ef7bfb98e70a8);
+            
+    
+            var circle_97f84f088dfa78a53696f36167886f74 = L.circle(
+                [4.63, -74.1984],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1820.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_1025813623063f05f9869bd476e19a37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_575dd903493cf63419c1a4444a14027a = $(`<div id="html_575dd903493cf63419c1a4444a14027a" style="width: 100.0%; height: 100.0%;"><b>BOSA</b><br>Frentes de seguridad: 91</div>`)[0];
+                popup_1025813623063f05f9869bd476e19a37.setContent(html_575dd903493cf63419c1a4444a14027a);
+            
+        
+
+        circle_97f84f088dfa78a53696f36167886f74.bindPopup(popup_1025813623063f05f9869bd476e19a37)
+        ;
+
+        
+    
+    
+            var marker_01541bd969d916dfcd61099c764aa379 = L.marker(
+                [4.63, -74.1984],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_db7ca0e528fb293e0d5191480be39e79 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eBOSA\u003cbr\u003e91 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_01541bd969d916dfcd61099c764aa379.setIcon(div_icon_db7ca0e528fb293e0d5191480be39e79);
+        
+    
+                marker_01541bd969d916dfcd61099c764aa379.setIcon(div_icon_db7ca0e528fb293e0d5191480be39e79);
+            
+    
+            var circle_b41ab643116e969d1499b139d3386689 = L.circle(
+                [4.596, -74.0743],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 620.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_36f90ffe3b00aa2924288f946ad92bb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3cb7c88c5c524fa8563261469dcf91d = $(`<div id="html_a3cb7c88c5c524fa8563261469dcf91d" style="width: 100.0%; height: 100.0%;"><b>CANDELARIA</b><br>Frentes de seguridad: 31</div>`)[0];
+                popup_36f90ffe3b00aa2924288f946ad92bb8.setContent(html_a3cb7c88c5c524fa8563261469dcf91d);
+            
+        
+
+        circle_b41ab643116e969d1499b139d3386689.bindPopup(popup_36f90ffe3b00aa2924288f946ad92bb8)
+        ;
+
+        
+    
+    
+            var marker_7ce60fafc1ade816aeb5eb55512e39f5 = L.marker(
+                [4.596, -74.0743],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_e201db1a91acbfe281170eb9e0a79811 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eCANDELARIA\u003cbr\u003e31 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_7ce60fafc1ade816aeb5eb55512e39f5.setIcon(div_icon_e201db1a91acbfe281170eb9e0a79811);
+        
+    
+                marker_7ce60fafc1ade816aeb5eb55512e39f5.setIcon(div_icon_e201db1a91acbfe281170eb9e0a79811);
+            
+    
+            var circle_8ea3279c151da7ff17b788f62689e647 = L.circle(
+                [4.6486, -74.0664],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 760.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_c9f9b1c2dfef56758a955c48634a456a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e9336123a024a9b6a8c76ed7f8525ce = $(`<div id="html_0e9336123a024a9b6a8c76ed7f8525ce" style="width: 100.0%; height: 100.0%;"><b>CHAPINERO</b><br>Frentes de seguridad: 38</div>`)[0];
+                popup_c9f9b1c2dfef56758a955c48634a456a.setContent(html_0e9336123a024a9b6a8c76ed7f8525ce);
+            
+        
+
+        circle_8ea3279c151da7ff17b788f62689e647.bindPopup(popup_c9f9b1c2dfef56758a955c48634a456a)
+        ;
+
+        
+    
+    
+            var marker_32f99fa20f4b054faa8d807d71c55e2f = L.marker(
+                [4.6486, -74.0664],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_97ff22d46997b8d880da8a1df0dfd182 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eCHAPINERO\u003cbr\u003e38 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_32f99fa20f4b054faa8d807d71c55e2f.setIcon(div_icon_97ff22d46997b8d880da8a1df0dfd182);
+        
+    
+                marker_32f99fa20f4b054faa8d807d71c55e2f.setIcon(div_icon_97ff22d46997b8d880da8a1df0dfd182);
+            
+    
+            var circle_2932ee18a2e1325643af1eeca46ba3af = L.circle(
+                [4.602028321187263, -74.07970696790484],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 660.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_116e552dc6570273dbe14c6da7ce29e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdfcc53623f9a7f040cc5e37a3c7c27c = $(`<div id="html_cdfcc53623f9a7f040cc5e37a3c7c27c" style="width: 100.0%; height: 100.0%;"><b>CRISTOBAL</b><br>Frentes de seguridad: 33</div>`)[0];
+                popup_116e552dc6570273dbe14c6da7ce29e4.setContent(html_cdfcc53623f9a7f040cc5e37a3c7c27c);
+            
+        
+
+        circle_2932ee18a2e1325643af1eeca46ba3af.bindPopup(popup_116e552dc6570273dbe14c6da7ce29e4)
+        ;
+
+        
+    
+    
+            var marker_b234758777d4da8a80a7144400747273 = L.marker(
+                [4.602028321187263, -74.07970696790484],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_d6d11fbea3b27b65979e0c45acb00029 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eCRISTOBAL\u003cbr\u003e33 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_b234758777d4da8a80a7144400747273.setIcon(div_icon_d6d11fbea3b27b65979e0c45acb00029);
+        
+    
+                marker_b234758777d4da8a80a7144400747273.setIcon(div_icon_d6d11fbea3b27b65979e0c45acb00029);
+            
+    
+            var circle_fb7e198f5725f7590522eb80739f6d24 = L.circle(
+                [4.7055, -74.1113],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1400.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_dd4ed5f7d49a1372ac01f146937fec00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42c065dd87680b9de4b181c42f03a40a = $(`<div id="html_42c065dd87680b9de4b181c42f03a40a" style="width: 100.0%; height: 100.0%;"><b>ENGATIVA</b><br>Frentes de seguridad: 70</div>`)[0];
+                popup_dd4ed5f7d49a1372ac01f146937fec00.setContent(html_42c065dd87680b9de4b181c42f03a40a);
+            
+        
+
+        circle_fb7e198f5725f7590522eb80739f6d24.bindPopup(popup_dd4ed5f7d49a1372ac01f146937fec00)
+        ;
+
+        
+    
+    
+            var marker_8b28c6fad36624eabfc855dd9919dd4a = L.marker(
+                [4.7055, -74.1113],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_22196d767edc0b95516a32e54b699df8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eENGATIVA\u003cbr\u003e70 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_8b28c6fad36624eabfc855dd9919dd4a.setIcon(div_icon_22196d767edc0b95516a32e54b699df8);
+        
+    
+                marker_8b28c6fad36624eabfc855dd9919dd4a.setIcon(div_icon_22196d767edc0b95516a32e54b699df8);
+            
+    
+            var circle_167d7cecca4b38b857e9e13de7de3ed6 = L.circle(
+                [4.615066057732394, -74.08505575315199],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1220.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_67b74ff6fd0b7bdeb322126aeeb5c28c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a85b27ffa94854acd5504758bcf371dc = $(`<div id="html_a85b27ffa94854acd5504758bcf371dc" style="width: 100.0%; height: 100.0%;"><b>FE</b><br>Frentes de seguridad: 61</div>`)[0];
+                popup_67b74ff6fd0b7bdeb322126aeeb5c28c.setContent(html_a85b27ffa94854acd5504758bcf371dc);
+            
+        
+
+        circle_167d7cecca4b38b857e9e13de7de3ed6.bindPopup(popup_67b74ff6fd0b7bdeb322126aeeb5c28c)
+        ;
+
+        
+    
+    
+            var marker_b179e9773add9ac8e12c798fa92de288 = L.marker(
+                [4.615066057732394, -74.08505575315199],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_eaac6a0f43800b2fb9962fee4def695c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eFE\u003cbr\u003e61 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_b179e9773add9ac8e12c798fa92de288.setIcon(div_icon_eaac6a0f43800b2fb9962fee4def695c);
+        
+    
+                marker_b179e9773add9ac8e12c798fa92de288.setIcon(div_icon_eaac6a0f43800b2fb9962fee4def695c);
+            
+    
+            var circle_4431f9621bc1368e8e7b1b750d84c4d9 = L.circle(
+                [4.6709, -74.1469],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_06e866eaf21f8503821e1f9ae5123218 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c90b577e1a7b182684ac56410cc3faed = $(`<div id="html_c90b577e1a7b182684ac56410cc3faed" style="width: 100.0%; height: 100.0%;"><b>FONTIBON</b><br>Frentes de seguridad: 109</div>`)[0];
+                popup_06e866eaf21f8503821e1f9ae5123218.setContent(html_c90b577e1a7b182684ac56410cc3faed);
+            
+        
+
+        circle_4431f9621bc1368e8e7b1b750d84c4d9.bindPopup(popup_06e866eaf21f8503821e1f9ae5123218)
+        ;
+
+        
+    
+    
+            var marker_f5f443ca717572e5027a1c8d7c6c30b3 = L.marker(
+                [4.6709, -74.1469],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_29c0aace85678fa10d201e3bc1c297ae = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eFONTIBON\u003cbr\u003e109 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_f5f443ca717572e5027a1c8d7c6c30b3.setIcon(div_icon_29c0aace85678fa10d201e3bc1c297ae);
+        
+    
+                marker_f5f443ca717572e5027a1c8d7c6c30b3.setIcon(div_icon_29c0aace85678fa10d201e3bc1c297ae);
+            
+    
+            var circle_e0074672c909fad0c95876e8e4c4ab69 = L.circle(
+                [4.651, -74.1617],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_82c4137bcb2e3b84e8c3a42e0ad3a051 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0f3e032d2e59320588bc3de8999edd4 = $(`<div id="html_d0f3e032d2e59320588bc3de8999edd4" style="width: 100.0%; height: 100.0%;"><b>KENNEDY</b><br>Frentes de seguridad: 227</div>`)[0];
+                popup_82c4137bcb2e3b84e8c3a42e0ad3a051.setContent(html_d0f3e032d2e59320588bc3de8999edd4);
+            
+        
+
+        circle_e0074672c909fad0c95876e8e4c4ab69.bindPopup(popup_82c4137bcb2e3b84e8c3a42e0ad3a051)
+        ;
+
+        
+    
+    
+            var marker_c975817ecbca53a75c7b61bd38d3bf07 = L.marker(
+                [4.651, -74.1617],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_75a357ce9867df97a11c55cda425faf0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eKENNEDY\u003cbr\u003e227 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_c975817ecbca53a75c7b61bd38d3bf07.setIcon(div_icon_75a357ce9867df97a11c55cda425faf0);
+        
+    
+                marker_c975817ecbca53a75c7b61bd38d3bf07.setIcon(div_icon_75a357ce9867df97a11c55cda425faf0);
+            
+    
+            var circle_9453cb0beea8cfd984384d92db7e669e = L.circle(
+                [4.607, -74.0892],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 860.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_cb7a1221b06d989060b3638cca8b06f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cf2630c3f359120fe39e9bb4f63661f = $(`<div id="html_4cf2630c3f359120fe39e9bb4f63661f" style="width: 100.0%; height: 100.0%;"><b>MARTIRES</b><br>Frentes de seguridad: 43</div>`)[0];
+                popup_cb7a1221b06d989060b3638cca8b06f1.setContent(html_4cf2630c3f359120fe39e9bb4f63661f);
+            
+        
+
+        circle_9453cb0beea8cfd984384d92db7e669e.bindPopup(popup_cb7a1221b06d989060b3638cca8b06f1)
+        ;
+
+        
+    
+    
+            var marker_807d388bde7dbd0f70e522895162a647 = L.marker(
+                [4.607, -74.0892],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_d36401eab5e97ee873cc01f0951ba148 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eMARTIRES\u003cbr\u003e43 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_807d388bde7dbd0f70e522895162a647.setIcon(div_icon_d36401eab5e97ee873cc01f0951ba148);
+        
+    
+                marker_807d388bde7dbd0f70e522895162a647.setIcon(div_icon_d36401eab5e97ee873cc01f0951ba148);
+            
+    
+            var circle_bd146aa69c962343dce724d35b71abcc = L.circle(
+                [4.595361069059521, -74.05818909249342],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1200.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_2f6fb75acb6064dd01a2688d0b7a264d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7579ff389b6ef387c903fe262bb6e316 = $(`<div id="html_7579ff389b6ef387c903fe262bb6e316" style="width: 100.0%; height: 100.0%;"><b>NARIÃO</b><br>Frentes de seguridad: 60</div>`)[0];
+                popup_2f6fb75acb6064dd01a2688d0b7a264d.setContent(html_7579ff389b6ef387c903fe262bb6e316);
+            
+        
+
+        circle_bd146aa69c962343dce724d35b71abcc.bindPopup(popup_2f6fb75acb6064dd01a2688d0b7a264d)
+        ;
+
+        
+    
+    
+            var marker_7fef8d7828c816df1d99e9a7854d99fd = L.marker(
+                [4.595361069059521, -74.05818909249342],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_b122c5634be64622ad8892a78092ff8c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eNARI\u00c3\u0091O\u003cbr\u003e60 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_7fef8d7828c816df1d99e9a7854d99fd.setIcon(div_icon_b122c5634be64622ad8892a78092ff8c);
+        
+    
+                marker_7fef8d7828c816df1d99e9a7854d99fd.setIcon(div_icon_b122c5634be64622ad8892a78092ff8c);
+            
+    
+            var circle_4ccb70e44950df359c385ad8069a3b19 = L.circle(
+                [4.7652, -74.0742],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 860.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_e6da7a157fb9e26f35acfdc8f99f8ca7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_199a590540285a3ba020f70704936a16 = $(`<div id="html_199a590540285a3ba020f70704936a16" style="width: 100.0%; height: 100.0%;"><b>SUBA</b><br>Frentes de seguridad: 43</div>`)[0];
+                popup_e6da7a157fb9e26f35acfdc8f99f8ca7.setContent(html_199a590540285a3ba020f70704936a16);
+            
+        
+
+        circle_4ccb70e44950df359c385ad8069a3b19.bindPopup(popup_e6da7a157fb9e26f35acfdc8f99f8ca7)
+        ;
+
+        
+    
+    
+            var marker_824a30cfd55c16743b2279218f482845 = L.marker(
+                [4.7652, -74.0742],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_e2a1dd9cb6b7f480985d53ebfc95ba76 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eSUBA\u003cbr\u003e43 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_824a30cfd55c16743b2279218f482845.setIcon(div_icon_e2a1dd9cb6b7f480985d53ebfc95ba76);
+        
+    
+                marker_824a30cfd55c16743b2279218f482845.setIcon(div_icon_e2a1dd9cb6b7f480985d53ebfc95ba76);
+            
+    
+            var circle_bdc539f4d457b22b7722d1087e3dfa5f = L.circle(
+                [4.6447, -74.0926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 819.9999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_5fc3c8fd3c1a5d4280875e2d10b97111 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a301f052cd35c355494c870a2d87b77 = $(`<div id="html_1a301f052cd35c355494c870a2d87b77" style="width: 100.0%; height: 100.0%;"><b>TEUSAQUILLO</b><br>Frentes de seguridad: 41</div>`)[0];
+                popup_5fc3c8fd3c1a5d4280875e2d10b97111.setContent(html_1a301f052cd35c355494c870a2d87b77);
+            
+        
+
+        circle_bdc539f4d457b22b7722d1087e3dfa5f.bindPopup(popup_5fc3c8fd3c1a5d4280875e2d10b97111)
+        ;
+
+        
+    
+    
+            var marker_f6c9574144f722fee4420c1c28580eec = L.marker(
+                [4.6447, -74.0926],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_7526f84d9868a158acc9208664a9e7fe = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eTEUSAQUILLO\u003cbr\u003e41 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_f6c9574144f722fee4420c1c28580eec.setIcon(div_icon_7526f84d9868a158acc9208664a9e7fe);
+        
+    
+                marker_f6c9574144f722fee4420c1c28580eec.setIcon(div_icon_7526f84d9868a158acc9208664a9e7fe);
+            
+    
+            var circle_afaeb341e6c923e4668bc486cf18e593 = L.circle(
+                [4.5724, -74.1384],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 919.9999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_c672be1a5532247a689e4fa9505bd166 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ec78e48acfe91a81d251145557e150a = $(`<div id="html_1ec78e48acfe91a81d251145557e150a" style="width: 100.0%; height: 100.0%;"><b>TUNJUELITO</b><br>Frentes de seguridad: 46</div>`)[0];
+                popup_c672be1a5532247a689e4fa9505bd166.setContent(html_1ec78e48acfe91a81d251145557e150a);
+            
+        
+
+        circle_afaeb341e6c923e4668bc486cf18e593.bindPopup(popup_c672be1a5532247a689e4fa9505bd166)
+        ;
+
+        
+    
+    
+            var marker_f199ae66341c07afb9bc6894f6905e80 = L.marker(
+                [4.5724, -74.1384],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_2956ecb36dc689bbae747fe47996c334 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eTUNJUELITO\u003cbr\u003e46 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_f199ae66341c07afb9bc6894f6905e80.setIcon(div_icon_2956ecb36dc689bbae747fe47996c334);
+        
+    
+                marker_f199ae66341c07afb9bc6894f6905e80.setIcon(div_icon_2956ecb36dc689bbae747fe47996c334);
+            
+    
+            var circle_3c2c65d1956ab11dffbd37238cbf4f61 = L.circle(
+                [4.628575091430321, -74.06216521253698],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 860.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_9cdefa1c612742b3753a014f665b428c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80505ec028d5f7aa5e4354b72d3e2f46 = $(`<div id="html_80505ec028d5f7aa5e4354b72d3e2f46" style="width: 100.0%; height: 100.0%;"><b>UNIDOS</b><br>Frentes de seguridad: 43</div>`)[0];
+                popup_9cdefa1c612742b3753a014f665b428c.setContent(html_80505ec028d5f7aa5e4354b72d3e2f46);
+            
+        
+
+        circle_3c2c65d1956ab11dffbd37238cbf4f61.bindPopup(popup_9cdefa1c612742b3753a014f665b428c)
+        ;
+
+        
+    
+    
+            var marker_d4838597cdf4eea15f6d311c6d2a39c8 = L.marker(
+                [4.628575091430321, -74.06216521253698],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_1db8c5a7ec732a8865de8afccfc620db = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eUNIDOS\u003cbr\u003e43 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_d4838597cdf4eea15f6d311c6d2a39c8.setIcon(div_icon_1db8c5a7ec732a8865de8afccfc620db);
+        
+    
+                marker_d4838597cdf4eea15f6d311c6d2a39c8.setIcon(div_icon_1db8c5a7ec732a8865de8afccfc620db);
+            
+    
+            var circle_b19862222370eef2073ce5ec2ce0b5bf = L.circle(
+                [4.571263885643046, -74.08213130913957],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 880.0000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_d95c334c7c4a188cbc595b46357acac8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7064b9e4defa34a828ac4ed777624a1f = $(`<div id="html_7064b9e4defa34a828ac4ed777624a1f" style="width: 100.0%; height: 100.0%;"><b>URIBE</b><br>Frentes de seguridad: 44</div>`)[0];
+                popup_d95c334c7c4a188cbc595b46357acac8.setContent(html_7064b9e4defa34a828ac4ed777624a1f);
+            
+        
+
+        circle_b19862222370eef2073ce5ec2ce0b5bf.bindPopup(popup_d95c334c7c4a188cbc595b46357acac8)
+        ;
+
+        
+    
+    
+            var marker_2f440fd63d932ab4b25dadfcee23b7cd = L.marker(
+                [4.571263885643046, -74.08213130913957],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_04ba65948e7976d88844e23094f608aa = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eURIBE\u003cbr\u003e44 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_2f440fd63d932ab4b25dadfcee23b7cd.setIcon(div_icon_04ba65948e7976d88844e23094f608aa);
+        
+    
+                marker_2f440fd63d932ab4b25dadfcee23b7cd.setIcon(div_icon_04ba65948e7976d88844e23094f608aa);
+            
+    
+            var circle_e3c005169b19b4454c4ed9e91f9cf31e = L.circle(
+                [4.711, -74.0324],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1420.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_36a6659f1aaa69bc67b420905e15ef0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4223a5408f30a7aa61e28f4d7a917187 = $(`<div id="html_4223a5408f30a7aa61e28f4d7a917187" style="width: 100.0%; height: 100.0%;"><b>USAQUEN</b><br>Frentes de seguridad: 71</div>`)[0];
+                popup_36a6659f1aaa69bc67b420905e15ef0f.setContent(html_4223a5408f30a7aa61e28f4d7a917187);
+            
+        
+
+        circle_e3c005169b19b4454c4ed9e91f9cf31e.bindPopup(popup_36a6659f1aaa69bc67b420905e15ef0f)
+        ;
+
+        
+    
+    
+            var marker_eec4b8100326322e9d0c7cb4d71d3589 = L.marker(
+                [4.711, -74.0324],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_9bb98943e7dc83039bacf0ca47c03b16 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eUSAQUEN\u003cbr\u003e71 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_eec4b8100326322e9d0c7cb4d71d3589.setIcon(div_icon_9bb98943e7dc83039bacf0ca47c03b16);
+        
+    
+                marker_eec4b8100326322e9d0c7cb4d71d3589.setIcon(div_icon_9bb98943e7dc83039bacf0ca47c03b16);
+            
+    
+            var circle_448fa4befcd40b26245fd07896f0182c = L.circle(
+                [4.5271, -74.1141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 900.0, "stroke": true, "weight": 3}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+        var popup_e4181f6736a7fde247dcfd3f864cdfd6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fe36121d2f2a626d54e014a57586b0a = $(`<div id="html_6fe36121d2f2a626d54e014a57586b0a" style="width: 100.0%; height: 100.0%;"><b>USME</b><br>Frentes de seguridad: 45</div>`)[0];
+                popup_e4181f6736a7fde247dcfd3f864cdfd6.setContent(html_6fe36121d2f2a626d54e014a57586b0a);
+            
+        
+
+        circle_448fa4befcd40b26245fd07896f0182c.bindPopup(popup_e4181f6736a7fde247dcfd3f864cdfd6)
+        ;
+
+        
+    
+    
+            var marker_b35dd3fd2ffe6ea687224e793c26ae94 = L.marker(
+                [4.5271, -74.1141],
+                {
+}
+            ).addTo(map_241251e2b0616e4c9619c144871fa16e);
+        
+    
+            var div_icon_4cc56efa28cc0e09df84c493df2d4c46 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; text-align: center; background-color: rgba(255,255,255,0.7); border-radius: 3px; padding: 2px; width: 150px;\"\u003eUSME\u003cbr\u003e45 frentes\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [75, 0],
+  "className": "empty",
+});
+            marker_b35dd3fd2ffe6ea687224e793c26ae94.setIcon(div_icon_4cc56efa28cc0e09df84c493df2d4c46);
+        
+    
+                marker_b35dd3fd2ffe6ea687224e793c26ae94.setIcon(div_icon_4cc56efa28cc0e09df84c493df2d4c46);
+            
+</script>
+</html>

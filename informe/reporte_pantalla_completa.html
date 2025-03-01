@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis de Datos de Seguridad y Criminalidad - Pantalla Completa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 1px solid #bdc3c7;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    .header {
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .viz-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .viz-item {
+      width: 100%;
+      margin-bottom: 30px;
+      background-color: #f1f2f6;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .viz-item h4 {
+      margin: 0;
+      padding: 15px;
+      background-color: #dfe4ea;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 800px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #bdc3c7;
+      color: #7f8c8d;
+    }
+
+    .resumen {
+      padding: 15px;
+      background-color: #e8f4f8;
+      border-left: 4px solid #3498db;
+      margin-bottom: 20px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      background-color: #3498db;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      z-index: 100;
+    }
+
+    .nav ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media print {
+      .nav {
+        display: none;
+      }
+
+      iframe {
+        height: 500px;
+      }
+
+      .viz-item {
+        page-break-inside: avoid;
+        margin-bottom: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Análisis de Datos de Seguridad y Criminalidad</h1>
+    <h2>Visualizaciones a Pantalla Completa</h2>
+    <p>Fecha de generación: 2025-03-01 15:40:49</p>
+  </div>
+
+  <div class="nav">
+    <ul>
+      <li><a href="#intro">Introducción</a></li>
+      <li><a href="#tendencias-temporales">Tendencias Temporales</a></li>
+      <li><a href="#frentes-de-seguridad">Frentes de Seguridad</a></li>
+      <li><a href="#comparativas">Comparativas</a></li>
+      <li><a href="#análisis-por-delito">Análisis por Delito</a></li>
+      <li><a href="#conclusiones">Conclusiones</a></li>
+    </ul>
+  </div>
+
+  <div id="intro" class="section">
+    <h2>Introducción</h2>
+    <p>Este informe presenta visualizaciones de diversos conjuntos de datos relacionados con la seguridad y la
+      criminalidad.
+      Las visualizaciones están organizadas por categorías y cada una ocupa el ancho completo de la página para un
+      análisis más detallado.</p>
+  </div>
+
+  <div id="tendencias-temporales" class="section">
+    <h2>Tendencias Temporales</h2>
+    <div class="viz-container">
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Incautación Estupefacientes Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Incautación_Estupefacientes_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Patrones Mes</h4>
+        <iframe src="../visualizaciones/Homicidios_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Delitos Informáticos Tendencia Por Gã©Nero</h4>
+        <iframe src="../visualizaciones/Delitos_Informáticos_tendencia_por_GÃ©nero.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Tendencia Por Genero</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_tendencia_por_GENERO.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Capturas Tendencia Por Genero</h4>
+        <iframe src="../visualizaciones/Capturas_tendencia_por_GENERO.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Patrones Mes</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Delitos Informáticos Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Delitos_Informáticos_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Homicidios_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Homicidios_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Capturas Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Capturas_tendencia_anual.html"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="frentes-de-seguridad" class="section">
+    <h2>Frentes de Seguridad</h2>
+    <div class="viz-container">
+
+      <div class="viz-item">
+        <h4>Frentes De Seguridad Zona</h4>
+        <iframe src="../visualizaciones/Frentes_De_Seguridad_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Barrios</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_barrios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Heatmap Estado Localidad</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_heatmap_estado_localidad.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Localidad Barrio</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_localidad_barrio.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Integrantes Zona</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_integrantes_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Estados</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_estados.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Bogota</h4>
+        <iframe src="../visualizaciones/Frentes_Seguridad_Bogota.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes De Seguridad Estado</h4>
+        <iframe src="../visualizaciones/Frentes_De_Seguridad_estado.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Frentes Seguridad Localidades</h4>
+        <iframe src="../visualizaciones/frentes_seguridad_localidades.html"></iframe>
+      </div>
+
+      <!-- <div class="viz-item">
+                        <h4>Frentes Seguridad Por Localidad</h4>
+                        <iframe src="../visualizaciones/Frentes_Seguridad_por_localidad.html"></iframe>
+                    </div> -->
+
+    </div>
+  </div>
+
+  <div id="comparativas" class="section">
+    <h2>Comparativas</h2>
+    <div class="viz-container">
+
+      <div class="viz-item">
+        <h4>Comparativa Delitos Municipios</h4>
+        <iframe src="../visualizaciones/comparativa_delitos_municipios.html"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="análisis-por-delito" class="section">
+    <h2>Análisis por Delito</h2>
+    <div class="viz-container">
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Armas Medios</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_armas___medios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Clase De Sitio</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_clase_de_sitio.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Armas Medios Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_armas___medios_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Zona Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_zona_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Patrones Mes</h4>
+        <iframe src="../visualizaciones/Homicidios_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Armas Medios Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_armas___medios_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Zona</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Clase De Sitio</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_clase_de_sitio.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Armas Medios</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_armas_medios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Armas Medios</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_armas___medios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Tendencia Por Genero</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_tendencia_por_GENERO.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Zona</h4>
+        <iframe src="../visualizaciones/Homicidios_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Gã©Nero</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_gã©nero.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Zona</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Zona Evolucion</h4>
+        <iframe src="../visualizaciones/Homicidios_zona_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Patrones Mes</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Clase De Sitio Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_clase_de_sitio_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Clase De Sitio Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_clase_de_sitio_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Violencia Intrafamiliar Genero</h4>
+        <iframe src="../visualizaciones/Violencia_Intrafamiliar_genero.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Patrones Dia Semana</h4>
+        <iframe src="../visualizaciones/Homicidios_patrones_dia_semana.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Clase De Sitio</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_clase_de_sitio.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Tendencia Anual</h4>
+        <iframe src="../visualizaciones/Homicidios_tendencia_anual.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Clase De Sitio Evolucion</h4>
+        <iframe src="../visualizaciones/Homicidios_clase_de_sitio_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Armas Medios Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_armas___medios_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Zona Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_zona_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Armas Medios</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_armas___medios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Comercio Zona Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Comercio_zona_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Armas Medios Evolucion</h4>
+        <iframe src="../visualizaciones/Homicidios_armas___medios_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Gã©Nero Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_gã©nero_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Clase De Sitio</h4>
+        <iframe src="../visualizaciones/Homicidios_clase_de_sitio.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Personas Clase De Sitio Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Personas_clase_de_sitio_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Zona</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_zona.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Patrones Mes</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_patrones_mes.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Homicidios Armas Medios</h4>
+        <iframe src="../visualizaciones/Homicidios_armas___medios.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Clase Bien Evolucion</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_clase_bien_evolucion.html"></iframe>
+      </div>
+
+      <div class="viz-item">
+        <h4>Hurto Automotores Clase Bien</h4>
+        <iframe src="../visualizaciones/Hurto_Automotores_clase_bien.html"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="conclusiones" class="section">
+    <div class="footer">
+      <p>Análisis realizado con Python utilizando pandas, matplotlib, seaborn, plotly y folium.</p>
+      <p>Análisis de Datos de Seguridad y Criminalidad</p>
+    </div>
+</body>
+
+</html>

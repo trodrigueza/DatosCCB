@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fdbd883a150dcf00125577761a6a7122 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+                <h3 align="center" style="font-size:16px"><b>Mapa de Distribución por Municipio - Homicidios</b></h3>
+            
+    
+            <div class="folium-map" id="map_fdbd883a150dcf00125577761a6a7122" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fdbd883a150dcf00125577761a6a7122 = L.map(
+                "map_fdbd883a150dcf00125577761a6a7122",
+                {
+                    center: [4.570868, -74.297333],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_09b3b74ad9c8ef37d10d2bf009e82e16 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_09b3b74ad9c8ef37d10d2bf009e82e16.addTo(map_fdbd883a150dcf00125577761a6a7122);
+        
+    
+            var marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_1efdb8980c46ba5a7e097f21e53c7683 = L.marker(
+                [4.659444886403272, -74.06498381023191],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_42a263324d24f3eb2be2ed0bc9a7c6a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd74e4a20857886e3427324594ce16ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d88152c29619e13d62b10f1baa621e05 = $(`<div id="html_d88152c29619e13d62b10f1baa621e05" style="width: 100.0%; height: 100.0%;">BOGOTÃ D.C. (CT), CUNDINAMARCA<br>12090 casos</div>`)[0];
+                popup_fd74e4a20857886e3427324594ce16ea.setContent(html_d88152c29619e13d62b10f1baa621e05);
+            
+        
+
+        marker_1efdb8980c46ba5a7e097f21e53c7683.bindPopup(popup_fd74e4a20857886e3427324594ce16ea)
+        ;
+
+        
+    
+    
+                marker_1efdb8980c46ba5a7e097f21e53c7683.setIcon(icon_42a263324d24f3eb2be2ed0bc9a7c6a2);
+            
+    
+            var marker_b9fa58bf29c25bf4e9bcfb913376e1c5 = L.marker(
+                [4.534880818009809, -74.0141057438778],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_4a9dcf84fb936a39e7094f1fb506f346 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de21af7d05725a1e8c3a8f6d1e85c1db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b640dbf5d82c206d79e0b918b7533f71 = $(`<div id="html_b640dbf5d82c206d79e0b918b7533f71" style="width: 100.0%; height: 100.0%;">SOACHA, CUNDINAMARCA<br>2491 casos</div>`)[0];
+                popup_de21af7d05725a1e8c3a8f6d1e85c1db.setContent(html_b640dbf5d82c206d79e0b918b7533f71);
+            
+        
+
+        marker_b9fa58bf29c25bf4e9bcfb913376e1c5.bindPopup(popup_de21af7d05725a1e8c3a8f6d1e85c1db)
+        ;
+
+        
+    
+    
+                marker_b9fa58bf29c25bf4e9bcfb913376e1c5.setIcon(icon_4a9dcf84fb936a39e7094f1fb506f346);
+            
+    
+            var marker_f930e8487bc9417a6b1b03ec57b5ab4b = L.marker(
+                [4.6756582062845755, -73.99922119599424],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_9ea291926ab1d8dbbf7c394ae5de0816 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46f17d46c50e5fceb1eed767f1082bc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d45881fbc84f7aa538962191a500fd5 = $(`<div id="html_7d45881fbc84f7aa538962191a500fd5" style="width: 100.0%; height: 100.0%;">GIRARDOT, CUNDINAMARCA<br>623 casos</div>`)[0];
+                popup_46f17d46c50e5fceb1eed767f1082bc3.setContent(html_7d45881fbc84f7aa538962191a500fd5);
+            
+        
+
+        marker_f930e8487bc9417a6b1b03ec57b5ab4b.bindPopup(popup_46f17d46c50e5fceb1eed767f1082bc3)
+        ;
+
+        
+    
+    
+                marker_f930e8487bc9417a6b1b03ec57b5ab4b.setIcon(icon_9ea291926ab1d8dbbf7c394ae5de0816);
+            
+    
+            var marker_a00301109aa78784fb3c82ba244bd22d = L.marker(
+                [4.539486604668301, -74.14779507584885],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_b49a4349bd4f2f0a6113249e4eff3b99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f4c79afdd162228432a697b8a26ba38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b70a001e16ede2ae279dbf01148aff8 = $(`<div id="html_2b70a001e16ede2ae279dbf01148aff8" style="width: 100.0%; height: 100.0%;">FUSAGASUGÃ, CUNDINAMARCA<br>407 casos</div>`)[0];
+                popup_4f4c79afdd162228432a697b8a26ba38.setContent(html_2b70a001e16ede2ae279dbf01148aff8);
+            
+        
+
+        marker_a00301109aa78784fb3c82ba244bd22d.bindPopup(popup_4f4c79afdd162228432a697b8a26ba38)
+        ;
+
+        
+    
+    
+                marker_a00301109aa78784fb3c82ba244bd22d.setIcon(icon_b49a4349bd4f2f0a6113249e4eff3b99);
+            
+    
+            var marker_229626d0dbee289fa591b5ffead0920c = L.marker(
+                [4.6012986122428465, -74.09249396058628],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_68f2da59180096167f276159ed65fa4e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_019e28439b7e805184ae2da565e616a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e1a1bd425444e64d4f568ad59a2a96b = $(`<div id="html_1e1a1bd425444e64d4f568ad59a2a96b" style="width: 100.0%; height: 100.0%;">FACATATIVÃ, CUNDINAMARCA<br>330 casos</div>`)[0];
+                popup_019e28439b7e805184ae2da565e616a9.setContent(html_1e1a1bd425444e64d4f568ad59a2a96b);
+            
+        
+
+        marker_229626d0dbee289fa591b5ffead0920c.bindPopup(popup_019e28439b7e805184ae2da565e616a9)
+        ;
+
+        
+    
+    
+                marker_229626d0dbee289fa591b5ffead0920c.setIcon(icon_68f2da59180096167f276159ed65fa4e);
+            
+    
+            var marker_7da73355d1e3fe5da53c9cc6bb368236 = L.marker(
+                [4.508992525438287, -74.1525344101417],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_e9f8c9e1662157578f82d3d210e4ac0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5e94698c7543c3b481fdbf3b3ff5653 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b82143940079fef57a22b32ba2a38d2 = $(`<div id="html_7b82143940079fef57a22b32ba2a38d2" style="width: 100.0%; height: 100.0%;">ZIPAQUIRÃ, CUNDINAMARCA<br>304 casos</div>`)[0];
+                popup_f5e94698c7543c3b481fdbf3b3ff5653.setContent(html_7b82143940079fef57a22b32ba2a38d2);
+            
+        
+
+        marker_7da73355d1e3fe5da53c9cc6bb368236.bindPopup(popup_f5e94698c7543c3b481fdbf3b3ff5653)
+        ;
+
+        
+    
+    
+                marker_7da73355d1e3fe5da53c9cc6bb368236.setIcon(icon_e9f8c9e1662157578f82d3d210e4ac0f);
+            
+    
+            var marker_d038429125194140fc6e115645b40cf2 = L.marker(
+                [4.580013263726905, -74.03507316241013],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_213ba185fd7b1fa64c08a74221f84a33 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_611329b397718682a99794e4d3a04e7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e351cb3964e9416e177652539a29eff = $(`<div id="html_1e351cb3964e9416e177652539a29eff" style="width: 100.0%; height: 100.0%;">MOSQUERA, CUNDINAMARCA<br>225 casos</div>`)[0];
+                popup_611329b397718682a99794e4d3a04e7d.setContent(html_1e351cb3964e9416e177652539a29eff);
+            
+        
+
+        marker_d038429125194140fc6e115645b40cf2.bindPopup(popup_611329b397718682a99794e4d3a04e7d)
+        ;
+
+        
+    
+    
+                marker_d038429125194140fc6e115645b40cf2.setIcon(icon_213ba185fd7b1fa64c08a74221f84a33);
+            
+    
+            var marker_522308de0ad1e2f27c9416d701b8e995 = L.marker(
+                [4.656678124557896, -74.17461788680643],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_35b385a9d1954c5bafec519c82a2c2af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec9cc6d7e2fe1790ec4e60bbecfd379e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd494b928cc3a88e8d49566ac9950911 = $(`<div id="html_fd494b928cc3a88e8d49566ac9950911" style="width: 100.0%; height: 100.0%;">MADRID, CUNDINAMARCA<br>173 casos</div>`)[0];
+                popup_ec9cc6d7e2fe1790ec4e60bbecfd379e.setContent(html_fd494b928cc3a88e8d49566ac9950911);
+            
+        
+
+        marker_522308de0ad1e2f27c9416d701b8e995.bindPopup(popup_ec9cc6d7e2fe1790ec4e60bbecfd379e)
+        ;
+
+        
+    
+    
+                marker_522308de0ad1e2f27c9416d701b8e995.setIcon(icon_35b385a9d1954c5bafec519c82a2c2af);
+            
+    
+            var marker_7804ac1dc2616a0dc92e102df4bb5b5e = L.marker(
+                [4.657740333556823, -73.99096809171985],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_55835ce9630f6c95804ad92d169fe4cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2715556e98f23c2428b5e33ed5ee7e38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1468aeb010d4996879392d681bd2fedc = $(`<div id="html_1468aeb010d4996879392d681bd2fedc" style="width: 100.0%; height: 100.0%;">FUNZA, CUNDINAMARCA<br>171 casos</div>`)[0];
+                popup_2715556e98f23c2428b5e33ed5ee7e38.setContent(html_1468aeb010d4996879392d681bd2fedc);
+            
+        
+
+        marker_7804ac1dc2616a0dc92e102df4bb5b5e.bindPopup(popup_2715556e98f23c2428b5e33ed5ee7e38)
+        ;
+
+        
+    
+    
+                marker_7804ac1dc2616a0dc92e102df4bb5b5e.setIcon(icon_55835ce9630f6c95804ad92d169fe4cd);
+            
+    
+            var marker_337c298e450b796833c896cb4314a4b6 = L.marker(
+                [4.659737507531004, -74.06522474295596],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_381f7c8f1de76599f7af786b2707c512 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6611df1216ad806a4163b3bf89338bad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b9bea5e1eefa45b3b2717796cfe4f93 = $(`<div id="html_6b9bea5e1eefa45b3b2717796cfe4f93" style="width: 100.0%; height: 100.0%;">GUADUAS, CUNDINAMARCA<br>134 casos</div>`)[0];
+                popup_6611df1216ad806a4163b3bf89338bad.setContent(html_6b9bea5e1eefa45b3b2717796cfe4f93);
+            
+        
+
+        marker_337c298e450b796833c896cb4314a4b6.bindPopup(popup_6611df1216ad806a4163b3bf89338bad)
+        ;
+
+        
+    
+    
+                marker_337c298e450b796833c896cb4314a4b6.setIcon(icon_381f7c8f1de76599f7af786b2707c512);
+            
+    
+            var marker_bdf0652d7fcf48936fd9a28bd9d6855e = L.marker(
+                [4.626255820651575, -74.08137694181121],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_c0ee9c672f824d07a25bb640ec0c9040 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be0ffb6cdef082d395d6979472820ee4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd96a9b6fec340afb001cc58e7d2e8f4 = $(`<div id="html_fd96a9b6fec340afb001cc58e7d2e8f4" style="width: 100.0%; height: 100.0%;">CHÃA, CUNDINAMARCA<br>132 casos</div>`)[0];
+                popup_be0ffb6cdef082d395d6979472820ee4.setContent(html_fd96a9b6fec340afb001cc58e7d2e8f4);
+            
+        
+
+        marker_bdf0652d7fcf48936fd9a28bd9d6855e.bindPopup(popup_be0ffb6cdef082d395d6979472820ee4)
+        ;
+
+        
+    
+    
+                marker_bdf0652d7fcf48936fd9a28bd9d6855e.setIcon(icon_c0ee9c672f824d07a25bb640ec0c9040);
+            
+    
+            var marker_b6bd0a2f3748b94a0a4937bdf9058251 = L.marker(
+                [4.6144872518409565, -73.9853578220553],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_67e690cbec0210c7068de116cdbe8293 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7ba4aad6a62cf4ab0ebfb4baed5ee78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfdae04ec104177d25f73056dba39a81 = $(`<div id="html_cfdae04ec104177d25f73056dba39a81" style="width: 100.0%; height: 100.0%;">SILVANIA, CUNDINAMARCA<br>116 casos</div>`)[0];
+                popup_c7ba4aad6a62cf4ab0ebfb4baed5ee78.setContent(html_cfdae04ec104177d25f73056dba39a81);
+            
+        
+
+        marker_b6bd0a2f3748b94a0a4937bdf9058251.bindPopup(popup_c7ba4aad6a62cf4ab0ebfb4baed5ee78)
+        ;
+
+        
+    
+    
+                marker_b6bd0a2f3748b94a0a4937bdf9058251.setIcon(icon_67e690cbec0210c7068de116cdbe8293);
+            
+    
+            var marker_16b952163d68e996e88b9affd7b38f94 = L.marker(
+                [4.561566254479416, -74.17305948170203],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_ef0c6e65235e8aee3399d7f42ba267e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1c0733db5c228c79ef26266518d07de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8efea2cabf5b3860077ac527547c9cd = $(`<div id="html_f8efea2cabf5b3860077ac527547c9cd" style="width: 100.0%; height: 100.0%;">VILLETA, CUNDINAMARCA<br>113 casos</div>`)[0];
+                popup_d1c0733db5c228c79ef26266518d07de.setContent(html_f8efea2cabf5b3860077ac527547c9cd);
+            
+        
+
+        marker_16b952163d68e996e88b9affd7b38f94.bindPopup(popup_d1c0733db5c228c79ef26266518d07de)
+        ;
+
+        
+    
+    
+                marker_16b952163d68e996e88b9affd7b38f94.setIcon(icon_ef0c6e65235e8aee3399d7f42ba267e3);
+            
+    
+            var marker_4d6acaad4d6b598bf83a8ad52ff7b57f = L.marker(
+                [4.658195951976378, -74.09549320729913],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_35046eea0f5a88203dbc238a91d03b20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d476718bdd2e387c20e6bf77edfa1d98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35362aec951e314715c8d47d1d9759da = $(`<div id="html_35362aec951e314715c8d47d1d9759da" style="width: 100.0%; height: 100.0%;">SIBATÃ, CUNDINAMARCA<br>112 casos</div>`)[0];
+                popup_d476718bdd2e387c20e6bf77edfa1d98.setContent(html_35362aec951e314715c8d47d1d9759da);
+            
+        
+
+        marker_4d6acaad4d6b598bf83a8ad52ff7b57f.bindPopup(popup_d476718bdd2e387c20e6bf77edfa1d98)
+        ;
+
+        
+    
+    
+                marker_4d6acaad4d6b598bf83a8ad52ff7b57f.setIcon(icon_35046eea0f5a88203dbc238a91d03b20);
+            
+    
+            var marker_08d9fd43e33dbecdb87b1741ab78c097 = L.marker(
+                [4.565873634991525, -74.09670066513432],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_404ea96e5760f583d9696d4d5888d484 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1813cc43ea899d07aafd649b807173b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_895f602ce416bf84bc71bc4693221a50 = $(`<div id="html_895f602ce416bf84bc71bc4693221a50" style="width: 100.0%; height: 100.0%;">LA MESA, CUNDINAMARCA<br>101 casos</div>`)[0];
+                popup_1813cc43ea899d07aafd649b807173b4.setContent(html_895f602ce416bf84bc71bc4693221a50);
+            
+        
+
+        marker_08d9fd43e33dbecdb87b1741ab78c097.bindPopup(popup_1813cc43ea899d07aafd649b807173b4)
+        ;
+
+        
+    
+    
+                marker_08d9fd43e33dbecdb87b1741ab78c097.setIcon(icon_404ea96e5760f583d9696d4d5888d484);
+            
+    
+            var marker_bca4d46af9cee9dbfa402624be2f3743 = L.marker(
+                [4.672192080424451, -74.0454987603547],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_3579ca90006a601a96a9e210cbb895a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5300c3ebdab52aaaa839a0358a58b4fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cba6e0451747af570ef822c81491ac26 = $(`<div id="html_cba6e0451747af570ef822c81491ac26" style="width: 100.0%; height: 100.0%;">CAJICÃ, CUNDINAMARCA<br>93 casos</div>`)[0];
+                popup_5300c3ebdab52aaaa839a0358a58b4fb.setContent(html_cba6e0451747af570ef822c81491ac26);
+            
+        
+
+        marker_bca4d46af9cee9dbfa402624be2f3743.bindPopup(popup_5300c3ebdab52aaaa839a0358a58b4fb)
+        ;
+
+        
+    
+    
+                marker_bca4d46af9cee9dbfa402624be2f3743.setIcon(icon_3579ca90006a601a96a9e210cbb895a6);
+            
+    
+            var marker_17fef54d4222bd4c333ae73430db979e = L.marker(
+                [4.526372561778599, -74.17210942534834],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_d7d601652bf7cfca57d13d7d56124b6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c446c55310d3c5dd8adeb381900b1a4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f524c1358eb8266b31ac1d6c4edef1a = $(`<div id="html_0f524c1358eb8266b31ac1d6c4edef1a" style="width: 100.0%; height: 100.0%;">VILLA DE SAN DIEGO DE UBATE, CUNDINAMARCA<br>88 casos</div>`)[0];
+                popup_c446c55310d3c5dd8adeb381900b1a4e.setContent(html_0f524c1358eb8266b31ac1d6c4edef1a);
+            
+        
+
+        marker_17fef54d4222bd4c333ae73430db979e.bindPopup(popup_c446c55310d3c5dd8adeb381900b1a4e)
+        ;
+
+        
+    
+    
+                marker_17fef54d4222bd4c333ae73430db979e.setIcon(icon_d7d601652bf7cfca57d13d7d56124b6b);
+            
+    
+            var marker_18c6cc20b2e7e8a391dfdcff5fce6f19 = L.marker(
+                [4.507412045539633, -74.02304234152693],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_a6557bdf53be92bef2451d2adf6354ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_293dfc60aba2f4e5d8e4487afaa6cb16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da4d9f07121dc19c044b531971f0a3f4 = $(`<div id="html_da4d9f07121dc19c044b531971f0a3f4" style="width: 100.0%; height: 100.0%;">PUERTO SALGAR, CUNDINAMARCA<br>85 casos</div>`)[0];
+                popup_293dfc60aba2f4e5d8e4487afaa6cb16.setContent(html_da4d9f07121dc19c044b531971f0a3f4);
+            
+        
+
+        marker_18c6cc20b2e7e8a391dfdcff5fce6f19.bindPopup(popup_293dfc60aba2f4e5d8e4487afaa6cb16)
+        ;
+
+        
+    
+    
+                marker_18c6cc20b2e7e8a391dfdcff5fce6f19.setIcon(icon_a6557bdf53be92bef2451d2adf6354ed);
+            
+    
+            var marker_30f59b825304929b815b24dc8aed6326 = L.marker(
+                [4.572487812679712, -74.15103289564603],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_86e001d03f4b2ff0de5592f4791c69cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54051f6e1b287869bb9512bdc49ea43b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f0279439b12e826f129d7be4007e9b0 = $(`<div id="html_7f0279439b12e826f129d7be4007e9b0" style="width: 100.0%; height: 100.0%;">EL COLEGIO, CUNDINAMARCA<br>75 casos</div>`)[0];
+                popup_54051f6e1b287869bb9512bdc49ea43b.setContent(html_7f0279439b12e826f129d7be4007e9b0);
+            
+        
+
+        marker_30f59b825304929b815b24dc8aed6326.bindPopup(popup_54051f6e1b287869bb9512bdc49ea43b)
+        ;
+
+        
+    
+    
+                marker_30f59b825304929b815b24dc8aed6326.setIcon(icon_86e001d03f4b2ff0de5592f4791c69cd);
+            
+    
+            var marker_5b298152139f4984c50b7a4cc463d7bb = L.marker(
+                [4.538749339175902, -74.17870050289372],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_fb96339440c0eb8dbf23a329e0a41556 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c7b8995dbbe1177464ecbf742504d86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59fa25d0b108bd962188c989232caf54 = $(`<div id="html_59fa25d0b108bd962188c989232caf54" style="width: 100.0%; height: 100.0%;">LA VEGA, CUNDINAMARCA<br>74 casos</div>`)[0];
+                popup_0c7b8995dbbe1177464ecbf742504d86.setContent(html_59fa25d0b108bd962188c989232caf54);
+            
+        
+
+        marker_5b298152139f4984c50b7a4cc463d7bb.bindPopup(popup_0c7b8995dbbe1177464ecbf742504d86)
+        ;
+
+        
+    
+    
+                marker_5b298152139f4984c50b7a4cc463d7bb.setIcon(icon_fb96339440c0eb8dbf23a329e0a41556);
+            
+    
+            var marker_6d094b663b6cd97e14366556ee7713b2 = L.marker(
+                [4.52747948940861, -74.18157860759933],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_87a17e8adc320edf31d2a820ad4fd481 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_876e847a900ef63f08d7d8b07c754740 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_866206aba1737b06dc5e6d725f003fbb = $(`<div id="html_866206aba1737b06dc5e6d725f003fbb" style="width: 100.0%; height: 100.0%;">PACHO, CUNDINAMARCA<br>74 casos</div>`)[0];
+                popup_876e847a900ef63f08d7d8b07c754740.setContent(html_866206aba1737b06dc5e6d725f003fbb);
+            
+        
+
+        marker_6d094b663b6cd97e14366556ee7713b2.bindPopup(popup_876e847a900ef63f08d7d8b07c754740)
+        ;
+
+        
+    
+    
+                marker_6d094b663b6cd97e14366556ee7713b2.setIcon(icon_87a17e8adc320edf31d2a820ad4fd481);
+            
+    
+            var marker_1b04652ce2230b1956d19a041f56ba5c = L.marker(
+                [4.638368281374883, -74.15905691848752],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_9c49926f29e1e14ed4239159d09eb053 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37cea54bd7a335fc1104905182cfd5c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcf1b8b8f20ef023651aeed0dc8f67d9 = $(`<div id="html_bcf1b8b8f20ef023651aeed0dc8f67d9" style="width: 100.0%; height: 100.0%;">VIOTÃ, CUNDINAMARCA<br>68 casos</div>`)[0];
+                popup_37cea54bd7a335fc1104905182cfd5c8.setContent(html_bcf1b8b8f20ef023651aeed0dc8f67d9);
+            
+        
+
+        marker_1b04652ce2230b1956d19a041f56ba5c.bindPopup(popup_37cea54bd7a335fc1104905182cfd5c8)
+        ;
+
+        
+    
+    
+                marker_1b04652ce2230b1956d19a041f56ba5c.setIcon(icon_9c49926f29e1e14ed4239159d09eb053);
+            
+    
+            var marker_fbabbf89b11484b831f7f2e83f37580d = L.marker(
+                [4.550672447418576, -74.10043392612505],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_e65f73300c517e65445d5b0d5a9c5ba1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_142c1de7b31a8fceaad20a3c6ffaccfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3af7d5da11eb86f6cf38a9dc095d6cc1 = $(`<div id="html_3af7d5da11eb86f6cf38a9dc095d6cc1" style="width: 100.0%; height: 100.0%;">YACOPÃ, CUNDINAMARCA<br>57 casos</div>`)[0];
+                popup_142c1de7b31a8fceaad20a3c6ffaccfd.setContent(html_3af7d5da11eb86f6cf38a9dc095d6cc1);
+            
+        
+
+        marker_fbabbf89b11484b831f7f2e83f37580d.bindPopup(popup_142c1de7b31a8fceaad20a3c6ffaccfd)
+        ;
+
+        
+    
+    
+                marker_fbabbf89b11484b831f7f2e83f37580d.setIcon(icon_e65f73300c517e65445d5b0d5a9c5ba1);
+            
+    
+            var marker_d55b0e70334027e8699f844bf5ff58bb = L.marker(
+                [4.617722022751134, -73.98876469946508],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_65ef737c4d845e9577320e5c5163ed8f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16407dca063abacb49d4c02f14e96059 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1555f3b5e62444eb6151555ef33e6b9e = $(`<div id="html_1555f3b5e62444eb6151555ef33e6b9e" style="width: 100.0%; height: 100.0%;">COTA, CUNDINAMARCA<br>55 casos</div>`)[0];
+                popup_16407dca063abacb49d4c02f14e96059.setContent(html_1555f3b5e62444eb6151555ef33e6b9e);
+            
+        
+
+        marker_d55b0e70334027e8699f844bf5ff58bb.bindPopup(popup_16407dca063abacb49d4c02f14e96059)
+        ;
+
+        
+    
+    
+                marker_d55b0e70334027e8699f844bf5ff58bb.setIcon(icon_65ef737c4d845e9577320e5c5163ed8f);
+            
+    
+            var marker_9a4e3cb7757acdd583a9bf64a80b175a = L.marker(
+                [4.65100516985657, -74.08739592247147],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_77fe0e3fef9d2212cbf922a464d86eee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36498b4005f1487af705f1ce8dc0ab11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3cc04c65f0572864ee3b1a6f46bf84bf = $(`<div id="html_3cc04c65f0572864ee3b1a6f46bf84bf" style="width: 100.0%; height: 100.0%;">PARATEBUENO, CUNDINAMARCA<br>52 casos</div>`)[0];
+                popup_36498b4005f1487af705f1ce8dc0ab11.setContent(html_3cc04c65f0572864ee3b1a6f46bf84bf);
+            
+        
+
+        marker_9a4e3cb7757acdd583a9bf64a80b175a.bindPopup(popup_36498b4005f1487af705f1ce8dc0ab11)
+        ;
+
+        
+    
+    
+                marker_9a4e3cb7757acdd583a9bf64a80b175a.setIcon(icon_77fe0e3fef9d2212cbf922a464d86eee);
+            
+    
+            var marker_e43934f34c8679bd02eb5099d38d0874 = L.marker(
+                [4.691397807444463, -74.12759612053287],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_38fdc7406f5e0d8827bc182a15800cc2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10e4514008fc1b2118d51fc766626646 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f91725d54188f09e16a462576c230c8 = $(`<div id="html_4f91725d54188f09e16a462576c230c8" style="width: 100.0%; height: 100.0%;">TOCANCIPÃ, CUNDINAMARCA<br>51 casos</div>`)[0];
+                popup_10e4514008fc1b2118d51fc766626646.setContent(html_4f91725d54188f09e16a462576c230c8);
+            
+        
+
+        marker_e43934f34c8679bd02eb5099d38d0874.bindPopup(popup_10e4514008fc1b2118d51fc766626646)
+        ;
+
+        
+    
+    
+                marker_e43934f34c8679bd02eb5099d38d0874.setIcon(icon_38fdc7406f5e0d8827bc182a15800cc2);
+            
+    
+            var marker_34241e60236fb55aa6e60abe7ca91986 = L.marker(
+                [4.6063625126544405, -74.00348626707286],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_5b305aa5bfca6cb89bbe5c4630215943 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4d4ad86f20bfb4f23a3e6dfbc019510 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_461fc63aedb8ec2f20e6b91e8884fb3f = $(`<div id="html_461fc63aedb8ec2f20e6b91e8884fb3f" style="width: 100.0%; height: 100.0%;">CAQUEZA, CUNDINAMARCA<br>51 casos</div>`)[0];
+                popup_e4d4ad86f20bfb4f23a3e6dfbc019510.setContent(html_461fc63aedb8ec2f20e6b91e8884fb3f);
+            
+        
+
+        marker_34241e60236fb55aa6e60abe7ca91986.bindPopup(popup_e4d4ad86f20bfb4f23a3e6dfbc019510)
+        ;
+
+        
+    
+    
+                marker_34241e60236fb55aa6e60abe7ca91986.setIcon(icon_5b305aa5bfca6cb89bbe5c4630215943);
+            
+    
+            var marker_b8761fdd7ef858da106de0cab1ba1359 = L.marker(
+                [4.591322045615811, -74.05333624624748],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_b2e72609cb11a86f35682d55d671a374 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e37f2113cf6375064f492b9fd16e2662 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d789f3a87fd0a7ca92f40914ab6dc1a9 = $(`<div id="html_d789f3a87fd0a7ca92f40914ab6dc1a9" style="width: 100.0%; height: 100.0%;">SASAIMA, CUNDINAMARCA<br>50 casos</div>`)[0];
+                popup_e37f2113cf6375064f492b9fd16e2662.setContent(html_d789f3a87fd0a7ca92f40914ab6dc1a9);
+            
+        
+
+        marker_b8761fdd7ef858da106de0cab1ba1359.bindPopup(popup_e37f2113cf6375064f492b9fd16e2662)
+        ;
+
+        
+    
+    
+                marker_b8761fdd7ef858da106de0cab1ba1359.setIcon(icon_b2e72609cb11a86f35682d55d671a374);
+            
+    
+            var marker_bc3f29c430d1fd71ef4dc138158a2378 = L.marker(
+                [4.5730271598101755, -74.02814310842464],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_a1aba394ec01a49fd16d55d87d0abd0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d9a1bce527db26d698af999bb1e40c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98acc42c3bf0798d4a42db72b0e70fa0 = $(`<div id="html_98acc42c3bf0798d4a42db72b0e70fa0" style="width: 100.0%; height: 100.0%;">TOCAIMA, CUNDINAMARCA<br>49 casos</div>`)[0];
+                popup_6d9a1bce527db26d698af999bb1e40c2.setContent(html_98acc42c3bf0798d4a42db72b0e70fa0);
+            
+        
+
+        marker_bc3f29c430d1fd71ef4dc138158a2378.bindPopup(popup_6d9a1bce527db26d698af999bb1e40c2)
+        ;
+
+        
+    
+    
+                marker_bc3f29c430d1fd71ef4dc138158a2378.setIcon(icon_a1aba394ec01a49fd16d55d87d0abd0a);
+            
+    
+            var marker_2a4a507ca25e8ee7efaa9e7de7534f0d = L.marker(
+                [4.537753697112217, -74.13534181111048],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_6e16e4b74a906803ad73022e16cc0e82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7fa00fa973a23a23dec2bf156b62008e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bef9d51bb2e9475f915073e301f4197 = $(`<div id="html_4bef9d51bb2e9475f915073e301f4197" style="width: 100.0%; height: 100.0%;">TENJO, CUNDINAMARCA<br>49 casos</div>`)[0];
+                popup_7fa00fa973a23a23dec2bf156b62008e.setContent(html_4bef9d51bb2e9475f915073e301f4197);
+            
+        
+
+        marker_2a4a507ca25e8ee7efaa9e7de7534f0d.bindPopup(popup_7fa00fa973a23a23dec2bf156b62008e)
+        ;
+
+        
+    
+    
+                marker_2a4a507ca25e8ee7efaa9e7de7534f0d.setIcon(icon_6e16e4b74a906803ad73022e16cc0e82);
+            
+    
+            var marker_1c67eba1a449eafe0e483643dde00706 = L.marker(
+                [4.544304601264252, -74.1322229750055],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_9d932da4b8fbf37f642f69ece03ab59f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30ce173b576365c3744e395cb2da8eba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65109e9f78bf8eef76c467f30b2a60cb = $(`<div id="html_65109e9f78bf8eef76c467f30b2a60cb" style="width: 100.0%; height: 100.0%;">EL ROSAL, CUNDINAMARCA<br>48 casos</div>`)[0];
+                popup_30ce173b576365c3744e395cb2da8eba.setContent(html_65109e9f78bf8eef76c467f30b2a60cb);
+            
+        
+
+        marker_1c67eba1a449eafe0e483643dde00706.bindPopup(popup_30ce173b576365c3744e395cb2da8eba)
+        ;
+
+        
+    
+    
+                marker_1c67eba1a449eafe0e483643dde00706.setIcon(icon_9d932da4b8fbf37f642f69ece03ab59f);
+            
+    
+            var marker_c01326b0bc227abdeb3dec4cfc7f8d37 = L.marker(
+                [4.674732724662426, -74.16037545750874],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_6f97897ef844b2673a65eaa5bd0e304c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb25072ebe0ccec49c8fb4a6e03ca0ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77c976fa494fcd18a3b4fa85c2d73a57 = $(`<div id="html_77c976fa494fcd18a3b4fa85c2d73a57" style="width: 100.0%; height: 100.0%;">CHOCONTÃ, CUNDINAMARCA<br>48 casos</div>`)[0];
+                popup_cb25072ebe0ccec49c8fb4a6e03ca0ab.setContent(html_77c976fa494fcd18a3b4fa85c2d73a57);
+            
+        
+
+        marker_c01326b0bc227abdeb3dec4cfc7f8d37.bindPopup(popup_cb25072ebe0ccec49c8fb4a6e03ca0ab)
+        ;
+
+        
+    
+    
+                marker_c01326b0bc227abdeb3dec4cfc7f8d37.setIcon(icon_6f97897ef844b2673a65eaa5bd0e304c);
+            
+    
+            var marker_1f1ff52d41fed97122d5c874f5436d2b = L.marker(
+                [4.642629549552083, -74.17624204436079],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_b45e7539e0e6d652dc71ad2cd16e31ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c1554487d339e5a4aa5c12862e64ac2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82250f5fe11d3e2f746edb13989a2b30 = $(`<div id="html_82250f5fe11d3e2f746edb13989a2b30" style="width: 100.0%; height: 100.0%;">LA PALMA, CUNDINAMARCA<br>45 casos</div>`)[0];
+                popup_5c1554487d339e5a4aa5c12862e64ac2.setContent(html_82250f5fe11d3e2f746edb13989a2b30);
+            
+        
+
+        marker_1f1ff52d41fed97122d5c874f5436d2b.bindPopup(popup_5c1554487d339e5a4aa5c12862e64ac2)
+        ;
+
+        
+    
+    
+                marker_1f1ff52d41fed97122d5c874f5436d2b.setIcon(icon_b45e7539e0e6d652dc71ad2cd16e31ab);
+            
+    
+            var marker_8918c20cdde6090743748fe3d43c5403 = L.marker(
+                [4.6921071779717325, -74.06860012656033],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_cc83bb71f0301e11af406ac35f6da3ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58f181f2a9f925377ba0ad192ab5f622 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b22592432b24f0d76ca0a784a6d0988 = $(`<div id="html_0b22592432b24f0d76ca0a784a6d0988" style="width: 100.0%; height: 100.0%;">NOCAIMA, CUNDINAMARCA<br>45 casos</div>`)[0];
+                popup_58f181f2a9f925377ba0ad192ab5f622.setContent(html_0b22592432b24f0d76ca0a784a6d0988);
+            
+        
+
+        marker_8918c20cdde6090743748fe3d43c5403.bindPopup(popup_58f181f2a9f925377ba0ad192ab5f622)
+        ;
+
+        
+    
+    
+                marker_8918c20cdde6090743748fe3d43c5403.setIcon(icon_cc83bb71f0301e11af406ac35f6da3ea);
+            
+    
+            var marker_2f255cf1f02394c4b1bacd66bbece65a = L.marker(
+                [4.62948200273609, -74.03415623898894],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_c9efa3e6cc840616591f7d850ab53f66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60c6c9dcd29de0f6d7f111355bced150 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3cb32e2618fc9724fbe9a1a3634956c8 = $(`<div id="html_3cb32e2618fc9724fbe9a1a3634956c8" style="width: 100.0%; height: 100.0%;">GUASCA, CUNDINAMARCA<br>44 casos</div>`)[0];
+                popup_60c6c9dcd29de0f6d7f111355bced150.setContent(html_3cb32e2618fc9724fbe9a1a3634956c8);
+            
+        
+
+        marker_2f255cf1f02394c4b1bacd66bbece65a.bindPopup(popup_60c6c9dcd29de0f6d7f111355bced150)
+        ;
+
+        
+    
+    
+                marker_2f255cf1f02394c4b1bacd66bbece65a.setIcon(icon_c9efa3e6cc840616591f7d850ab53f66);
+            
+    
+            var marker_abf946bb97f425e9ade53f14b7b73d7a = L.marker(
+                [4.520098407574767, -74.08364434858711],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_d46678d4e75828ef0e3d18322ba63950 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_683c968542c24dcf9fd2563a0e7f59a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0fbedf084333f583c403d1f3e5094fe = $(`<div id="html_f0fbedf084333f583c403d1f3e5094fe" style="width: 100.0%; height: 100.0%;">CAPARRAPÃ, CUNDINAMARCA<br>43 casos</div>`)[0];
+                popup_683c968542c24dcf9fd2563a0e7f59a8.setContent(html_f0fbedf084333f583c403d1f3e5094fe);
+            
+        
+
+        marker_abf946bb97f425e9ade53f14b7b73d7a.bindPopup(popup_683c968542c24dcf9fd2563a0e7f59a8)
+        ;
+
+        
+    
+    
+                marker_abf946bb97f425e9ade53f14b7b73d7a.setIcon(icon_d46678d4e75828ef0e3d18322ba63950);
+            
+    
+            var marker_e9e4c8b637214cca2ef107c70e73bfd5 = L.marker(
+                [4.514233621871488, -74.06482634377504],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_45f8daaa7e69b02a9e25735a815e1df4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85337f33d887da86f94ae0c07f2e6b07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdd18fda73844630ce6d4d2391be2909 = $(`<div id="html_fdd18fda73844630ce6d4d2391be2909" style="width: 100.0%; height: 100.0%;">LA CALERA, CUNDINAMARCA<br>42 casos</div>`)[0];
+                popup_85337f33d887da86f94ae0c07f2e6b07.setContent(html_fdd18fda73844630ce6d4d2391be2909);
+            
+        
+
+        marker_e9e4c8b637214cca2ef107c70e73bfd5.bindPopup(popup_85337f33d887da86f94ae0c07f2e6b07)
+        ;
+
+        
+    
+    
+                marker_e9e4c8b637214cca2ef107c70e73bfd5.setIcon(icon_45f8daaa7e69b02a9e25735a815e1df4);
+            
+    
+            var marker_f9c86ec04a45a26811039cae68995b70 = L.marker(
+                [4.609751742292268, -74.1358100567047],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_3e58b3e5a771e98f2c0c062b5efb63e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2d749facb3eb537c25d079a4a811cf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fae85405859a26ae53e3dbb20e520944 = $(`<div id="html_fae85405859a26ae53e3dbb20e520944" style="width: 100.0%; height: 100.0%;">GUACHETÃ, CUNDINAMARCA<br>42 casos</div>`)[0];
+                popup_e2d749facb3eb537c25d079a4a811cf3.setContent(html_fae85405859a26ae53e3dbb20e520944);
+            
+        
+
+        marker_f9c86ec04a45a26811039cae68995b70.bindPopup(popup_e2d749facb3eb537c25d079a4a811cf3)
+        ;
+
+        
+    
+    
+                marker_f9c86ec04a45a26811039cae68995b70.setIcon(icon_3e58b3e5a771e98f2c0c062b5efb63e4);
+            
+    
+            var marker_bda21ddbaca3dee0d5f75ddeb93a7f3a = L.marker(
+                [4.575900491483814, -73.99339693119343],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_7aad625ea382e575d3d86162dc0c6556 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2fa898e43e9921e21d818400d6eb363 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5265dad6c5405783763b8ecc7318d34 = $(`<div id="html_f5265dad6c5405783763b8ecc7318d34" style="width: 100.0%; height: 100.0%;">RICAURTE, CUNDINAMARCA<br>42 casos</div>`)[0];
+                popup_f2fa898e43e9921e21d818400d6eb363.setContent(html_f5265dad6c5405783763b8ecc7318d34);
+            
+        
+
+        marker_bda21ddbaca3dee0d5f75ddeb93a7f3a.bindPopup(popup_f2fa898e43e9921e21d818400d6eb363)
+        ;
+
+        
+    
+    
+                marker_bda21ddbaca3dee0d5f75ddeb93a7f3a.setIcon(icon_7aad625ea382e575d3d86162dc0c6556);
+            
+    
+            var marker_419c268e11db0bbf9abf6097de985b99 = L.marker(
+                [4.6005345187501385, -74.10511709496974],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_0bdbf8c221429d5318e0d1c1f420188a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de043997f99fbcc89a4fb7ac7b1ca6b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e8de7e238beae689fb6c69970d38849 = $(`<div id="html_2e8de7e238beae689fb6c69970d38849" style="width: 100.0%; height: 100.0%;">MEDINA, CUNDINAMARCA<br>42 casos</div>`)[0];
+                popup_de043997f99fbcc89a4fb7ac7b1ca6b2.setContent(html_2e8de7e238beae689fb6c69970d38849);
+            
+        
+
+        marker_419c268e11db0bbf9abf6097de985b99.bindPopup(popup_de043997f99fbcc89a4fb7ac7b1ca6b2)
+        ;
+
+        
+    
+    
+                marker_419c268e11db0bbf9abf6097de985b99.setIcon(icon_0bdbf8c221429d5318e0d1c1f420188a);
+            
+    
+            var marker_289d993627130223645d58e8aaf0399d = L.marker(
+                [4.585592186188755, -74.00466784382701],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_6494750eae6a6bb0d83adee9799e8a5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5601b891d1f231f59d1484fd7e473a16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8427a66bf6829a81bb286e4516fa94f = $(`<div id="html_a8427a66bf6829a81bb286e4516fa94f" style="width: 100.0%; height: 100.0%;">COGUA, CUNDINAMARCA<br>39 casos</div>`)[0];
+                popup_5601b891d1f231f59d1484fd7e473a16.setContent(html_a8427a66bf6829a81bb286e4516fa94f);
+            
+        
+
+        marker_289d993627130223645d58e8aaf0399d.bindPopup(popup_5601b891d1f231f59d1484fd7e473a16)
+        ;
+
+        
+    
+    
+                marker_289d993627130223645d58e8aaf0399d.setIcon(icon_6494750eae6a6bb0d83adee9799e8a5d);
+            
+    
+            var marker_0af667f9fb73ef9ac918ff9d0cb97c27 = L.marker(
+                [4.627462171991915, -74.13911235894358],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_e185de429fdc9ffb6d6fc7234456453b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_758bbfb3c936d8081a447e2c95a2bb6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7742442be50071cff82adac9a35fe6f4 = $(`<div id="html_7742442be50071cff82adac9a35fe6f4" style="width: 100.0%; height: 100.0%;">SAN JUAN DE RÃO SECO, CUNDINAMARCA<br>37 casos</div>`)[0];
+                popup_758bbfb3c936d8081a447e2c95a2bb6f.setContent(html_7742442be50071cff82adac9a35fe6f4);
+            
+        
+
+        marker_0af667f9fb73ef9ac918ff9d0cb97c27.bindPopup(popup_758bbfb3c936d8081a447e2c95a2bb6f)
+        ;
+
+        
+    
+    
+                marker_0af667f9fb73ef9ac918ff9d0cb97c27.setIcon(icon_e185de429fdc9ffb6d6fc7234456453b);
+            
+    
+            var marker_c56254eb6cdce7e8fdef248c86e7374d = L.marker(
+                [4.612542281627004, -74.09646759137055],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_105438169ebef7a828d908dc7c4d6c85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae5bfb4728e4fc358154a7019acf9c0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_301a489aba15fc7ae52cc54ae43804ac = $(`<div id="html_301a489aba15fc7ae52cc54ae43804ac" style="width: 100.0%; height: 100.0%;">SUESCA, CUNDINAMARCA<br>37 casos</div>`)[0];
+                popup_ae5bfb4728e4fc358154a7019acf9c0d.setContent(html_301a489aba15fc7ae52cc54ae43804ac);
+            
+        
+
+        marker_c56254eb6cdce7e8fdef248c86e7374d.bindPopup(popup_ae5bfb4728e4fc358154a7019acf9c0d)
+        ;
+
+        
+    
+    
+                marker_c56254eb6cdce7e8fdef248c86e7374d.setIcon(icon_105438169ebef7a828d908dc7c4d6c85);
+            
+    
+            var marker_8c849b47d13ad4a5f051a57b1cda4290 = L.marker(
+                [4.52567927358544, -74.02770522916856],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_58154c109d2a2b96404524df7fd12348 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b252a4df944239360055544e98d880a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91c6ddf4ed02a4b4d976da842e8af5c2 = $(`<div id="html_91c6ddf4ed02a4b4d976da842e8af5c2" style="width: 100.0%; height: 100.0%;">BOJACÃ, CUNDINAMARCA<br>35 casos</div>`)[0];
+                popup_2b252a4df944239360055544e98d880a.setContent(html_91c6ddf4ed02a4b4d976da842e8af5c2);
+            
+        
+
+        marker_8c849b47d13ad4a5f051a57b1cda4290.bindPopup(popup_2b252a4df944239360055544e98d880a)
+        ;
+
+        
+    
+    
+                marker_8c849b47d13ad4a5f051a57b1cda4290.setIcon(icon_58154c109d2a2b96404524df7fd12348);
+            
+    
+            var marker_c457ab53105ae5d79569473a8d9da8a3 = L.marker(
+                [4.5899683604579335, -74.01558617423703],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_3902ab5ca9f948bf4a5e336839050713 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74d3b0274c139e9862040fc9ec54e192 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cafafa79861d2f36f5ac6d838a6ec1cd = $(`<div id="html_cafafa79861d2f36f5ac6d838a6ec1cd" style="width: 100.0%; height: 100.0%;">ARBELÃEZ, CUNDINAMARCA<br>35 casos</div>`)[0];
+                popup_74d3b0274c139e9862040fc9ec54e192.setContent(html_cafafa79861d2f36f5ac6d838a6ec1cd);
+            
+        
+
+        marker_c457ab53105ae5d79569473a8d9da8a3.bindPopup(popup_74d3b0274c139e9862040fc9ec54e192)
+        ;
+
+        
+    
+    
+                marker_c457ab53105ae5d79569473a8d9da8a3.setIcon(icon_3902ab5ca9f948bf4a5e336839050713);
+            
+    
+            var marker_6849874dea5c88411c21543bc4d92aa9 = L.marker(
+                [4.665307889422639, -74.15146082848824],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_adb962c1bde5dc02c910c957345fc5b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a637caab8ac1fafc8c2486ab8c050c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8122c1f24ec7893e26bc381106e3b187 = $(`<div id="html_8122c1f24ec7893e26bc381106e3b187" style="width: 100.0%; height: 100.0%;">SAN ANTONIO DEL TEQUENDAMA, CUNDINAMARCA<br>34 casos</div>`)[0];
+                popup_0a637caab8ac1fafc8c2486ab8c050c9.setContent(html_8122c1f24ec7893e26bc381106e3b187);
+            
+        
+
+        marker_6849874dea5c88411c21543bc4d92aa9.bindPopup(popup_0a637caab8ac1fafc8c2486ab8c050c9)
+        ;
+
+        
+    
+    
+                marker_6849874dea5c88411c21543bc4d92aa9.setIcon(icon_adb962c1bde5dc02c910c957345fc5b2);
+            
+    
+            var marker_90a69b2b7c6acc5806747d82ed955a5f = L.marker(
+                [4.620073986673566, -74.02800367971511],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_32462233fec134be6c163d0703552226 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f55fb228278a8c7779794dfb37cad8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c26befe65c989d70a2d04d817f058b8d = $(`<div id="html_c26befe65c989d70a2d04d817f058b8d" style="width: 100.0%; height: 100.0%;">APULO, CUNDINAMARCA<br>33 casos</div>`)[0];
+                popup_5f55fb228278a8c7779794dfb37cad8c.setContent(html_c26befe65c989d70a2d04d817f058b8d);
+            
+        
+
+        marker_90a69b2b7c6acc5806747d82ed955a5f.bindPopup(popup_5f55fb228278a8c7779794dfb37cad8c)
+        ;
+
+        
+    
+    
+                marker_90a69b2b7c6acc5806747d82ed955a5f.setIcon(icon_32462233fec134be6c163d0703552226);
+            
+    
+            var marker_2c4510a4383b8703f581a56625d2a2e8 = L.marker(
+                [4.589989237429058, -74.09814556918447],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_5bb164273096638ef50031fe9f6bf1b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc47c2a68178537841eb85e9ed08abe7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f48b44425b893fcb04e45dac6fef7e7 = $(`<div id="html_6f48b44425b893fcb04e45dac6fef7e7" style="width: 100.0%; height: 100.0%;">SAN FRANCISCO, CUNDINAMARCA<br>33 casos</div>`)[0];
+                popup_dc47c2a68178537841eb85e9ed08abe7.setContent(html_6f48b44425b893fcb04e45dac6fef7e7);
+            
+        
+
+        marker_2c4510a4383b8703f581a56625d2a2e8.bindPopup(popup_dc47c2a68178537841eb85e9ed08abe7)
+        ;
+
+        
+    
+    
+                marker_2c4510a4383b8703f581a56625d2a2e8.setIcon(icon_5bb164273096638ef50031fe9f6bf1b7);
+            
+    
+            var marker_713ed21502c4e270a50ac9c4c8788a30 = L.marker(
+                [4.64203786249433, -74.0193253161762],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_c5d2bfe712ad2badaf94d7784996437f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_147349eb038000875fbc07d6b8e0d7d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bba32a890c21e5c6a0ff490d86bcfa9 = $(`<div id="html_2bba32a890c21e5c6a0ff490d86bcfa9" style="width: 100.0%; height: 100.0%;">CACHIPAY, CUNDINAMARCA<br>33 casos</div>`)[0];
+                popup_147349eb038000875fbc07d6b8e0d7d4.setContent(html_2bba32a890c21e5c6a0ff490d86bcfa9);
+            
+        
+
+        marker_713ed21502c4e270a50ac9c4c8788a30.bindPopup(popup_147349eb038000875fbc07d6b8e0d7d4)
+        ;
+
+        
+    
+    
+                marker_713ed21502c4e270a50ac9c4c8788a30.setIcon(icon_c5d2bfe712ad2badaf94d7784996437f);
+            
+    
+            var marker_85e6120afe1d9d65820ca9696c9e3cc0 = L.marker(
+                [4.668045917407526, -74.13956118687801],
+                {
+}
+            ).addTo(marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a);
+        
+    
+            var icon_e3c930e70a3092d52e2dc69b31a33d1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9aec74bdabeac8f3dd83da96bf5ce8b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_350cee5109605ea71dda944a81b21c2f = $(`<div id="html_350cee5109605ea71dda944a81b21c2f" style="width: 100.0%; height: 100.0%;">QUIPILE, CUNDINAMARCA<br>33 casos</div>`)[0];
+                popup_a9aec74bdabeac8f3dd83da96bf5ce8b.setContent(html_350cee5109605ea71dda944a81b21c2f);
+            
+        
+
+        marker_85e6120afe1d9d65820ca9696c9e3cc0.bindPopup(popup_a9aec74bdabeac8f3dd83da96bf5ce8b)
+        ;
+
+        
+    
+    
+                marker_85e6120afe1d9d65820ca9696c9e3cc0.setIcon(icon_e3c930e70a3092d52e2dc69b31a33d1e);
+            
+    
+            marker_cluster_f632fb2eeeafb3c8c4c1804a24ebd48a.addTo(map_fdbd883a150dcf00125577761a6a7122);
+        
+</script>
+</html>
